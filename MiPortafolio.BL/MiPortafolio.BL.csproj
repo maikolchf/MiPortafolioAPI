@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MiPortafolio.DAL\MiPortafolio.DAL.csproj" />
+    <ProjectReference Include="..\MiPortafolio.ENT\MiPortafolio.ENT.csproj" />
+    <ProjectReference Include="..\MiPortafolio.SHARED\MiPortafolio.SHARED.csproj" />
+  </ItemGroup>
+
+</Project>
