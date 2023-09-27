@@ -1,15 +1,11 @@
-using FirebaseAdmin;
-using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Firestore;
 using MiPortafolio.SHARED;
 
-//FirebaseApp.Create(new AppOptions()
-//{
-//    Credential = GoogleCredential.FromFile(FireBaseConf.CrearConfiguracionDB())
-//});
-
-Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", FireBaseConf.CrearConfiguracionDB());
-
+IConfigurationRoot configuration = new ConfigurationBuilder()
+            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+            .AddJsonFile("appsettings.json")
+            .Build();
+Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", FireBaseConf.CrearConfiguracionDB(configuration));
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,7 +25,7 @@ builder.Services.AddSwaggerGen();
 //    opt.Cookie.IsEssential = true; 
 //});
 
-builder.Services.AddSingleton(FirestoreDb.Create("miportafolio-279f1"));
+builder.Services.AddSingleton(FirestoreDb.Create(configuration.GetSection("FirebaseConfig")["project_id"])); 
 
 
 var app = builder.Build();
