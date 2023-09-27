@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Cloud.Firestore" Version="3.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MiPortafolio.DAL\MiPortafolio.DAL.csproj" />
     <ProjectReference Include="..\MiPortafolio.ENT\MiPortafolio.ENT.csproj" />
     <ProjectReference Include="..\MiPortafolio.SHARED\MiPortafolio.SHARED.csproj" />

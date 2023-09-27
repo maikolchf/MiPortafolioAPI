@@ -7,14 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.4" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="FirebaseAdmin" Version="2.4.0" />
+    <PackageReference Include="Google.Cloud.Firestore" Version="3.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MiPortafolio.BL\MiPortafolio.BL.csproj" />
     <ProjectReference Include="..\MiPortafolio.ENT\MiPortafolio.ENT.csproj" />
     <ProjectReference Include="..\MiPortafolio.SHARED\MiPortafolio.SHARED.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ArchivosTemp\" />
   </ItemGroup>
 
 </Project>
