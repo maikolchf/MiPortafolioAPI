@@ -85,6 +85,7 @@ namespace MiPortafolio.DAL
                             Id = dict["Id"].ToString(),
                             Id_Usuario = dict["Id_Usuario"].ToString(),
                             Descripcion = dict["Descripcion"].ToString(),
+                            Posicion = Convert.ToInt32(dict["Posicion"])
                         };
 
                         respuesta.objetoRespuesta.Add(user);

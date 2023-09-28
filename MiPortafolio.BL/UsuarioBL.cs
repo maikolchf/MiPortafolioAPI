@@ -27,7 +27,7 @@ namespace MiPortafolio.BL
             var respuesta = await usuarioDAL.ObtenerUsuarios(usuario);            
 
             List<Usuario> filtrado = respuesta.objetoRespuesta.Where( item =>
-            
+                (item.Id == usuario.Id || string.IsNullOrEmpty(usuario.Id)) &&
                 (item.Nombre == usuario.Nombre || string.IsNullOrEmpty(usuario.Nombre)) &&
                 (item.PrimerApellido == usuario.PrimerApellido || string.IsNullOrEmpty(usuario.PrimerApellido)) &&
                 (item.SegundoApellido == usuario.SegundoApellido || string.IsNullOrEmpty(usuario.SegundoApellido)) &&

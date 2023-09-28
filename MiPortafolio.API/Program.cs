@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddCors();
 builder.Services.AddControllers();
 
 
@@ -30,6 +31,12 @@ builder.Services.AddSingleton(FirestoreDb.Create(configuration.GetSection("Fireb
 
 var app = builder.Build();
 
+app.UseCors(opt =>
+{
+    opt.WithOrigins("http://localhost:4200");
+    opt.AllowAnyMethod();
+    opt.AllowAnyHeader();
+});
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
 //{

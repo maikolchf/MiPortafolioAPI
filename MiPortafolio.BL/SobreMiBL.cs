@@ -34,7 +34,7 @@ namespace MiPortafolio.BL
             List<SobreMi> filtrado = respuesta.objetoRespuesta.Where(item =>
 
                 (item.Id_Usuario == usuario.Id || string.IsNullOrEmpty(usuario.Id))
-            ).ToList();
+            ).OrderBy(item => item.Posicion).ToList();
             respuesta.objetoRespuesta = filtrado;
             return respuesta;
         }

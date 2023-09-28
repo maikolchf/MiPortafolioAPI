@@ -1,6 +1,7 @@
 ﻿using Google.Cloud.Firestore;
 using System;
 using System.Collections.Generic;
+using System.IO.Pipes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,5 +37,9 @@ namespace MiPortafolio.ENT
 
         [FirestoreProperty]
         public string? Imagen { get; set; }
+
+        [FirestoreProperty]
+        public string? ImagenPerfil { get; set; }
+
     }
 }

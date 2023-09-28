@@ -93,7 +93,8 @@ namespace MiPortafolio.DAL
                             PrimerApellido = dict["PrimerApellido"].ToString(),
                             SegundoApellido = dict["SegundoApellido"].ToString(),
                             Imagen = dict["Imagen"].ToString(),
-                            PuestoLaboral = dict["PuestoLaboral"].ToString()
+                            PuestoLaboral = dict["PuestoLaboral"].ToString(),
+                            ImagenPerfil = dict["ImagenPerfil"].ToString()
 
                         };
 
