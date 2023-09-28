@@ -91,7 +91,10 @@ namespace MiPortafolio.DAL
                             Id = dict["Id"].ToString(),
                             Nombre = dict["Nombre"].ToString(),
                             PrimerApellido = dict["PrimerApellido"].ToString(),
-                            SegundoApellido = dict["SegundoApellido"].ToString()                            
+                            SegundoApellido = dict["SegundoApellido"].ToString(),
+                            Imagen = dict["Imagen"].ToString(),
+                            PuestoLaboral = dict["PuestoLaboral"].ToString()
+
                         };
 
                         respuesta.objetoRespuesta.Add(user);
