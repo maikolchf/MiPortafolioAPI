@@ -33,7 +33,7 @@ var app = builder.Build();
 
 app.UseCors(opt =>
 {
-    opt.WithOrigins("http://localhost:4200");
+    opt.WithOrigins("http://localhost:4200", "https://portafolio-michael.netlify.app/");
     opt.AllowAnyMethod();
     opt.AllowAnyHeader();
 });
