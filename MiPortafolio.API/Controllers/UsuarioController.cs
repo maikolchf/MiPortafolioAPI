@@ -16,12 +16,26 @@ namespace MiPortafolio.API.Controllers
         {
             usuarioBL = new UsuarioBL(firestore);
         }
-        // POST api/<UsuarioController>
+        
         [HttpPost]
-        public async Task<Respuesta<Usuario>> Post([FromBody] Usuario value)
+        [Route("[action]")]
+        public async Task<Respuesta<Usuario>> PostInsertarUsuario([FromBody] Usuario value)
         {
             return await usuarioBL.InsertarUsuario(value);
         }
 
+        [HttpPost]
+        [Route("[action]")]
+        public async Task<Respuesta<List<Usuario>>> PostObtenerUsuario([FromBody] Usuario value)
+        {
+            return await usuarioBL.ObtenerUsuarios(value);
+        }
+
+        [HttpPost]
+        [Route("[action]")]
+        public async Task<Respuesta<Usuario>> PostModificarUsuario([FromBody] Usuario value)
+        {
+            return await usuarioBL.ModificarUsuario(value);
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace MiPortafolio.ENT
     public class Usuario
     {
         [FirestoreProperty]
-        public int Id { get; set; }
+        public string? Id { get; set; }
 
         [FirestoreProperty]
         public string? Nombre { get; set; }
@@ -23,6 +23,9 @@ namespace MiPortafolio.ENT
         public string? SegundoApellido { get; set; }
 
         [FirestoreProperty]
+        public string? PuestoLaboral { get; set; }
+
+        [FirestoreProperty]
         public string? Celular { get; set; }
 
         [FirestoreProperty]
@@ -30,5 +33,8 @@ namespace MiPortafolio.ENT
 
         [FirestoreProperty]
         public string? Contrasenna { get; set; }
+
+        [FirestoreProperty]
+        public string? Imagen { get; set; }
     }
 }
