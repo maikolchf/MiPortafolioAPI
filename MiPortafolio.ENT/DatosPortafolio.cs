@@ -10,5 +10,6 @@ namespace MiPortafolio.ENT
     {
         public Usuario? usuario { get; set; }
         public List<SobreMi>? sobreMi { get; set; }
+        public List<ExpeLaboral>? expeLaboral { get; set;}
     }
 }

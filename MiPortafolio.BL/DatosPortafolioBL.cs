@@ -12,10 +12,12 @@ namespace MiPortafolio.BL
     {
         private UsuarioBL usuarioBL;
         private SobreMiBL sobreMiBL;
+        private ExpeLaboralBL expeLaboralBL;
         public DatosPortafolioBL(FirestoreDb _db)
         {
             usuarioBL = new UsuarioBL(_db);
             sobreMiBL = new SobreMiBL(_db);
+            expeLaboralBL = new ExpeLaboralBL(_db);
         }
 
         public Respuesta<DatoPortafolio> ObtenerDatos(string idUsuario)
@@ -29,6 +31,7 @@ namespace MiPortafolio.BL
 
                 datoPortafolio.usuario = usuarioBL.ObtenerUsuarios(filtro).Result.objetoRespuesta?.FirstOrDefault();
                 datoPortafolio.sobreMi = sobreMiBL.ObtenerSobreMi(filtro).Result.objetoRespuesta;
+                datoPortafolio.expeLaboral = expeLaboralBL.ObtenerExpeLaboral(filtro).Result.objetoRespuesta;
 
                 respuesta.objetoRespuesta= datoPortafolio;
                 respuesta.hayError = false;
