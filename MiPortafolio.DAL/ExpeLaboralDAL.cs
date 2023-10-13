@@ -28,14 +28,14 @@ namespace MiPortafolio.DAL
                 await nuevoRegistro.SetAsync(expeLaboral);
 
                 respuesta.hayError = false;
-                respuesta.mensaje = "Registro insertado correctamente";
+                respuesta.mensaje = "¡Registro insertado correctamente!";
                 respuesta.objetoRespuesta = expeLaboral;
 
             }
             catch (Exception)
             {
                 respuesta.hayError = true;
-                respuesta.mensaje = "Ah acurrido un error al realizar el proceso";
+                respuesta.mensaje = "¡Ah acurrido un error al realizar el proceso!";
                 respuesta.objetoRespuesta = expeLaboral;
             }
 
@@ -51,14 +51,14 @@ namespace MiPortafolio.DAL
                 await reference.DeleteAsync();
 
                 respuesta.hayError = false;
-                respuesta.mensaje = "Registro eliminado correctamente";
+                respuesta.mensaje = "¡Registro eliminado correctamente!";
                 respuesta.objetoRespuesta = expeLaboral;
 
             }
             catch (Exception)
             {
                 respuesta.hayError = true;
-                respuesta.mensaje = "Ah acurrido un error al realizar el proceso";
+                respuesta.mensaje = "¡Ah acurrido un error al realizar el proceso!";
                 respuesta.objetoRespuesta = expeLaboral;
             }
 
@@ -96,13 +96,13 @@ namespace MiPortafolio.DAL
                 }
 
                 respuesta.hayError = false;
-                respuesta.mensaje = "Datos obtenidos correctamente";
+                respuesta.mensaje = "¡Datos obtenidos correctamente!";
 
             }
             catch (Exception)
             {
                 respuesta.hayError = true;
-                respuesta.mensaje = "Ah acurrido un error al realizar el proceso";
+                respuesta.mensaje = "¡Ah acurrido un error al realizar el proceso!";
                 respuesta.objetoRespuesta = new List<ExpeLaboral>();
             }
             return respuesta;

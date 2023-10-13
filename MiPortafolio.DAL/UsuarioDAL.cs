@@ -27,14 +27,14 @@ namespace MiPortafolio.DAL
                 await nuevoRegistro.SetAsync(usuario);
 
                 respuesta.hayError = false;
-                respuesta.mensaje = "Registro insertado correctamente";
+                respuesta.mensaje = "¡Registro insertado correctamente!";
                 respuesta.objetoRespuesta = usuario;
 
             }
             catch(Exception)
             {
                 respuesta.hayError = true;
-                respuesta.mensaje = "Ah acurrido un error al realizar el proceso";
+                respuesta.mensaje = "¡Ah acurrido un error al realizar el proceso!";
                 respuesta.objetoRespuesta = usuario;
             }
 
@@ -55,14 +55,14 @@ namespace MiPortafolio.DAL
                 await reference.UpdateAsync(dict);
 
                 respuesta.hayError = false;
-                respuesta.mensaje = "Registro modificado correctamente";
+                respuesta.mensaje = "¡Registro modificado correctamente!";
                 respuesta.objetoRespuesta = usuario;
 
             }
             catch (Exception)
             {
                 respuesta.hayError = true;
-                respuesta.mensaje = "Ah acurrido un error al realizar el proceso";
+                respuesta.mensaje = "¡Ah acurrido un error al realizar el proceso!";
                 respuesta.objetoRespuesta = usuario;
             }
 
@@ -103,13 +103,13 @@ namespace MiPortafolio.DAL
                 }
 
                 respuesta.hayError = false;
-                respuesta.mensaje = "Datos obtenidos correctamente";
+                respuesta.mensaje = "¡Datos obtenidos correctamente!";
 
             }
             catch (Exception)
             {
                 respuesta.hayError = true;
-                respuesta.mensaje = "Ah acurrido un error al realizar el proceso";
+                respuesta.mensaje = "¡Ah acurrido un error al realizar el proceso!";
                 respuesta.objetoRespuesta = null;
             }
 

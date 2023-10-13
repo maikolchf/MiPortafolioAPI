@@ -29,14 +29,14 @@ namespace MiPortafolio.DAL
                 await nuevoRegistro.SetAsync(sobreMi);
 
                 respuesta.hayError = false;
-                respuesta.mensaje = "Registro insertado correctamente";
+                respuesta.mensaje = "¡Registro insertado correctamente!";
                 respuesta.objetoRespuesta = sobreMi;
 
             }
             catch (Exception)
             {
                 respuesta.hayError = true;
-                respuesta.mensaje = "Ah acurrido un error al realizar el proceso";
+                respuesta.mensaje = "¡Ah acurrido un error al realizar el proceso!";
                 respuesta.objetoRespuesta = sobreMi;
             }
 
@@ -52,14 +52,14 @@ namespace MiPortafolio.DAL
                 await reference.DeleteAsync();
 
                 respuesta.hayError = false;
-                respuesta.mensaje = "Registro eliminado correctamente";
+                respuesta.mensaje = "¡Registro eliminado correctamente!";
                 respuesta.objetoRespuesta = sobreMi;
 
             }
             catch (Exception)
             {
                 respuesta.hayError = true;
-                respuesta.mensaje = "Ah acurrido un error al realizar el proceso";
+                respuesta.mensaje = "¡Ah acurrido un error al realizar el proceso!";
                 respuesta.objetoRespuesta = sobreMi;
             }
 
@@ -93,13 +93,13 @@ namespace MiPortafolio.DAL
                 }
 
                 respuesta.hayError = false;
-                respuesta.mensaje = "Datos obtenidos correctamente";
+                respuesta.mensaje = "¡Datos obtenidos correctamente!";
 
             }
             catch (Exception)
             {
                 respuesta.hayError = true;
-                respuesta.mensaje = "Ah acurrido un error al realizar el proceso";
+                respuesta.mensaje = "¡Ah acurrido un error al realizar el proceso!";
                 respuesta.objetoRespuesta = new List<SobreMi>();
             }
             return respuesta;
