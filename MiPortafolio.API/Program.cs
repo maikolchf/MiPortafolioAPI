@@ -31,30 +31,15 @@ builder.Services.AddSingleton(FirestoreDb.Create(configuration.GetSection("Fireb
 
 var app = builder.Build();
 
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseCors(opt =>
 {
-    app.UseCors(opt =>
-    {
-        opt.WithOrigins("http://localhost:4200");
-        opt.AllowAnyMethod();
-        opt.AllowAnyHeader();
-    });
+    opt.WithOrigins("https://portafolio-michael.netlify.app", "http://localhost:4200");
+    opt.AllowAnyMethod();
+    opt.AllowAnyHeader();
+});
 
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-else
-{
-    app.UseCors(opt =>
-    {
-        opt.WithOrigins("https://portafolio-michael.netlify.app");
-        opt.AllowAnyMethod();
-        opt.AllowAnyHeader();
-    });
-}
-
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
