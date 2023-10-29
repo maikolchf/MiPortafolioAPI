@@ -38,5 +38,10 @@ namespace MiPortafolio.BL
             respuesta.objetoRespuesta = filtrado;
             return respuesta;
         }
+
+        public async Task<Respuesta<SobreMi>> ModificarSobreMI(SobreMi sobreMi)
+        {
+            return await sobreMiDAL.ModificarSobreMi(sobreMi);
+        }
     }
 }

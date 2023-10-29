@@ -104,5 +104,33 @@ namespace MiPortafolio.DAL
             }
             return respuesta;
         }
+
+        public async Task<Respuesta<SobreMi>> ModificarSobreMi(SobreMi sobreMi)
+        {
+            Respuesta<SobreMi> respuesta = new Respuesta<SobreMi>();
+            try
+            {
+                DocumentReference reference = DB.Collection("SobreMi").Document(sobreMi.Id);
+
+                string jsonUsuario = JsonConvert.SerializeObject(sobreMi);
+
+                Dictionary<string, object> dict = JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonUsuario);
+
+                await reference.UpdateAsync(dict);
+
+                respuesta.hayError = false;
+                respuesta.mensaje = "¡Registro modificado correctamente!";
+                respuesta.objetoRespuesta = sobreMi;
+
+            }
+            catch (Exception)
+            {
+                respuesta.hayError = true;
+                respuesta.mensaje = "¡Ah acurrido un error al realizar el proceso!";
+                respuesta.objetoRespuesta = sobreMi;
+            }
+
+            return respuesta;
+        }
     }
 }

@@ -37,5 +37,12 @@ namespace MiPortafolio.API.Controllers
         {
             return await sobreMiBL.ObtenerSobreMi(usuario);
         }
+
+        [HttpPost]
+        [Route("[action]")]
+        public async Task<Respuesta<SobreMi>> ModificarSobreMi([FromBody] SobreMi sobreMi)
+        {
+            return await sobreMiBL.ModificarSobreMI(sobreMi);
+        }
     }
 }
